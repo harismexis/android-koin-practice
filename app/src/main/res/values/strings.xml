@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Android Hilt</string>
+    <string name="app_name">Android Koin</string>
     <string name="screen_home_label">Heroes</string>
     <string name="screen_hero_detail_label">Hero</string>
 
