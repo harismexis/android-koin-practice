@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidHiltProject">
+        android:theme="@style/Theme.AndroidKoinPractice">
 
         <activity android:name="com.harismexis.koinpractice.presentation.screens.home.ui.activity.MainActivity"
             android:theme="@style/MainActivityTheme">

@@ -1,4 +1,4 @@
-package com.harismexis.hiltproject.framework.util.ui
+package com.harismexis.koinpractice.framework.util.ui
 
 import android.app.Activity
 import android.view.inputmethod.InputMethodManager

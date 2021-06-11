@@ -3,7 +3,8 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
-    id 'dagger.hilt.android.plugin'
+    // id 'dagger.hilt.android.plugin'
+    id 'koin'
 }
 
 def commonValues = rootProject.ext.common
@@ -71,10 +72,10 @@ dependencies {
     implementation libraries.values()
     implementation rxJavaDependencies.values()
     implementation navigationDependencies.values()
+    implementation koinAndroidXDependencies.values()
     debugImplementation librariesDebug.values()
     api glideDependencies.values()
     kapt librariesKapt.values()
     testImplementation testLibraries.values()
     androidTestImplementation androidTestLibraries.values()
-    kaptAndroidTest librariesKapt.hilt_android_compiler
 }

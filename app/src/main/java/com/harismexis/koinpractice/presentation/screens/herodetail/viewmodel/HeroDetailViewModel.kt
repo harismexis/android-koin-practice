@@ -8,12 +8,9 @@ import androidx.lifecycle.viewModelScope
 import com.harismexis.koinpractice.datamodel.repository.HeroLocalRepository
 import com.harismexis.koinpractice.framework.extensions.getErrorMessage
 import com.harismexis.koinpractice.presentation.result.HeroDetailResult
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class HeroDetailViewModel @Inject constructor(
+class HeroDetailViewModel(
     private val heroLocal: HeroLocalRepository,
 ) : ViewModel() {
 

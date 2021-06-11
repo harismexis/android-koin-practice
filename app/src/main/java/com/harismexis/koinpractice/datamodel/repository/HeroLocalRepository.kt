@@ -5,11 +5,8 @@ import com.harismexis.koinpractice.framework.datasource.database.data.RickAndMor
 import com.harismexis.koinpractice.framework.extensions.hero.toItem
 import com.harismexis.koinpractice.framework.extensions.hero.toItems
 import com.harismexis.koinpractice.framework.extensions.hero.toLocalItems
-import javax.inject.Inject
-import javax.inject.Singleton
 
-@Singleton
-class HeroLocalRepository @Inject constructor(
+class HeroLocalRepository (
     private val dao: RickAndMortyLocalDao
 ) {
     suspend fun updateHeros(items: List<Hero>) {

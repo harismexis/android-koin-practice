@@ -3,27 +3,27 @@ package com.harismexis.koinpractice.presentation.screens.home.ui.fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.harismexis.koinpractice.framework.util.ui.hideKeyboard
+import com.harismexis.koinpractice.R
+import com.harismexis.koinpractice.databinding.FragmentHomeBinding
 import com.harismexis.koinpractice.datamodel.domain.Hero
 import com.harismexis.koinpractice.framework.event.EventObserver
 import com.harismexis.koinpractice.framework.extensions.showToast
-import com.harismexis.hiltproject.framework.util.ui.hideKeyboard
-import com.harismexis.koinpractice.R
 import com.harismexis.koinpractice.presentation.base.BaseFragment
 import com.harismexis.koinpractice.presentation.result.HerosResult
 import com.harismexis.koinpractice.presentation.screens.home.ui.adapter.HerosAdapter
-import com.harismexis.koinpractice.databinding.FragmentHomeBinding
 import com.harismexis.koinpractice.presentation.screens.home.ui.viewholder.HeroViewHolder
 import com.harismexis.koinpractice.presentation.screens.home.viewmodel.HomeViewModel
+import org.koin.androidx.viewmodel.compat.ViewModelCompat.getViewModel
 
 class HomeFragment : BaseFragment(), HeroViewHolder.HeroClickListener,
     android.widget.SearchView.OnQueryTextListener {
 
-    val viewModel: HomeViewModel by viewModels()
+    lateinit var viewModel: HomeViewModel
     private var binding: FragmentHomeBinding? = null
     private lateinit var adapter: HerosAdapter
     private var uiModels: MutableList<Hero> = mutableListOf()
@@ -36,6 +36,7 @@ class HomeFragment : BaseFragment(), HeroViewHolder.HeroClickListener,
     }
 
     override fun onCreateView() {
+        viewModel = getViewModel(this, HomeViewModel::class.java)
         setupToolbar()
         setupSwipeToRefresh()
         initialiseRecycler()

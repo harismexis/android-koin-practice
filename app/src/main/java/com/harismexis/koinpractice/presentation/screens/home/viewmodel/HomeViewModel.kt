@@ -10,12 +10,9 @@ import com.harismexis.koinpractice.datamodel.repository.HeroRemoteRepository
 import com.harismexis.koinpractice.framework.event.Event
 import com.harismexis.koinpractice.framework.extensions.getErrorMessage
 import com.harismexis.koinpractice.presentation.result.HerosResult
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class HomeViewModel @Inject constructor(
+class HomeViewModel(
     val heroRemote: HeroRemoteRepository,
     val heroLocal: HeroLocalRepository
 ) : ViewModel() {
