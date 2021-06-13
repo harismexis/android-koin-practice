@@ -3,7 +3,6 @@ package com.harismexis.koinpractice.presentation.screens.herodetail.ui.fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
@@ -17,12 +16,13 @@ import com.harismexis.koinpractice.framework.extensions.showToast
 import com.harismexis.koinpractice.presentation.base.BaseFragment
 import com.harismexis.koinpractice.presentation.result.HeroDetailResult
 import com.harismexis.koinpractice.presentation.screens.herodetail.viewmodel.HeroDetailViewModel
+import org.koin.androidx.viewmodel.compat.ViewModelCompat
 
 class HeroDetailFragment : BaseFragment() {
 
     private var binding: FragmentHeroDetailBinding? = null
     private var detailBinding: HeroDetailViewBinding? = null
-    private val viewModel: HeroDetailViewModel by viewModels()
+    private lateinit var viewModel: HeroDetailViewModel
 
     companion object {
         private const val ARG_HERO_ID = "actorId"
@@ -34,6 +34,10 @@ class HeroDetailFragment : BaseFragment() {
             fragment.arguments = args
             return fragment
         }
+    }
+
+    override fun onCreateView() {
+        viewModel = ViewModelCompat.getViewModel(this, HeroDetailViewModel::class.java)
     }
 
     override fun onViewCreated() {
@@ -75,8 +79,6 @@ class HeroDetailFragment : BaseFragment() {
     private fun populateError(error: String) {
         requireContext().showToast(error)
     }
-
-    override fun onCreateView() {}
 
     private fun fetchHeroDetails() {
         val heroId = arguments?.getInt(ARG_HERO_ID)
