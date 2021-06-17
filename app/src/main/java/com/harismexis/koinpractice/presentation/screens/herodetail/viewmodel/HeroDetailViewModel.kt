@@ -5,13 +5,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.harismexis.koinpractice.datamodel.repository.HeroLocalRepository
+import com.harismexis.koinpractice.datamodel.repository.HeroLocal
 import com.harismexis.koinpractice.framework.extensions.getErrorMessage
 import com.harismexis.koinpractice.presentation.result.HeroDetailResult
 import kotlinx.coroutines.launch
 
 class HeroDetailViewModel(
-    private val heroLocal: HeroLocalRepository,
+    private val heroLocal: HeroLocal,
 ) : ViewModel() {
 
     private val tag = HeroDetailViewModel::class.qualifiedName

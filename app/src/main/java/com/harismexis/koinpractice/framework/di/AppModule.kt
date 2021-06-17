@@ -4,12 +4,14 @@ import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.harismexis.koinpractice.BuildConfig
-import com.harismexis.koinpractice.datamodel.repository.HeroLocalRepository
-import com.harismexis.koinpractice.datamodel.repository.HeroRemoteRepository
+import com.harismexis.koinpractice.datamodel.repository.HeroLocal
+import com.harismexis.koinpractice.datamodel.repository.HeroRemote
 import com.harismexis.koinpractice.framework.datasource.database.RickAndMortyDatabase
 import com.harismexis.koinpractice.framework.datasource.database.data.RickAndMortyLocalDao
+import com.harismexis.koinpractice.framework.datasource.database.repository.HeroLocalRepository
 import com.harismexis.koinpractice.framework.datasource.network.api.RickAndMortyApi
 import com.harismexis.koinpractice.framework.datasource.network.data.RickAndMortyRemoteDao
+import com.harismexis.koinpractice.framework.datasource.network.repository.HeroRemoteRepository
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidContext
 import org.koin.dsl.module
@@ -54,7 +56,7 @@ fun provideLocalDao(app: Context): RickAndMortyLocalDao {
     return RickAndMortyDatabase.getDatabase(app).getDao()
 }
 
-fun provideLocalRepository(dao: RickAndMortyLocalDao): HeroLocalRepository {
+fun provideLocalRepository(dao: RickAndMortyLocalDao): HeroLocal {
     return HeroLocalRepository(dao)
 }
 
@@ -62,6 +64,6 @@ fun provideRemoteDao(api: RickAndMortyApi): RickAndMortyRemoteDao {
     return RickAndMortyRemoteDao(api)
 }
 
-fun provideRemoteRepository(dao: RickAndMortyRemoteDao): HeroRemoteRepository {
+fun provideRemoteRepository(dao: RickAndMortyRemoteDao): HeroRemote {
     return HeroRemoteRepository(dao)
 }

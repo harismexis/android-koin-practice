@@ -5,16 +5,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.harismexis.koinpractice.datamodel.repository.HeroLocalRepository
-import com.harismexis.koinpractice.datamodel.repository.HeroRemoteRepository
+import com.harismexis.koinpractice.datamodel.repository.HeroLocal
+import com.harismexis.koinpractice.datamodel.repository.HeroRemote
 import com.harismexis.koinpractice.framework.event.Event
 import com.harismexis.koinpractice.framework.extensions.getErrorMessage
 import com.harismexis.koinpractice.presentation.result.HerosResult
 import kotlinx.coroutines.launch
 
 class HomeViewModel(
-    val heroRemote: HeroRemoteRepository,
-    val heroLocal: HeroLocalRepository
+    val heroRemote: HeroRemote,
+    val heroLocal: HeroLocal
 ) : ViewModel() {
 
     private val TAG = HomeViewModel::class.qualifiedName
