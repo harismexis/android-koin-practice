@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidKoinPractice">
 
-        <activity android:name="com.harismexis.koinpractice.presentation.screens.home.ui.activity.MainActivity"
+        <activity android:name="com.harismexis.koinpractice.presentation.activity.MainActivity"
             android:theme="@style/MainActivityTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
