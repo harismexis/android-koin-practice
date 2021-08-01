@@ -1,6 +1,6 @@
 package com.harismexis.koinpractice.presentation.result
 
-import com.harismexis.koinpractice.datamodel.domain.Hero
+import com.harismexis.koinpractice.core.domain.Hero
 
 sealed class HerosResult {
     data class Success(val items: List<Hero>): HerosResult()

@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.harismexis.koinpractice.datamodel.repository.HeroLocal
-import com.harismexis.koinpractice.framework.extensions.getErrorMessage
+import com.harismexis.koinpractice.core.repository.HeroLocal
+import com.harismexis.koinpractice.framework.util.extensions.getErrorMessage
 import com.harismexis.koinpractice.presentation.result.HeroDetailResult
 import kotlinx.coroutines.launch
 

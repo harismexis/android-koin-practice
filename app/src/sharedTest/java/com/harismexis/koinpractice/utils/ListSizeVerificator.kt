@@ -1,6 +1,6 @@
 package com.harismexis.koinpractice.utils
 
-import com.harismexis.koinpractice.parser.MockHerosParser
+import com.harismexis.koinpractice.reader.MockHerosProvider
 import org.junit.Assert
 
 fun <T, P> verifyListsHaveSameSize(
@@ -18,13 +18,13 @@ fun <T> verifyListSize(
 }
 
 fun <T> verifyListSizeWhenAllIdsValid(items: List<T>) {
-    verifyListSize(MockHerosParser.EXPECTED_NUM_HEROS_WHEN_ALL_IDS_VALID, items)
+    verifyListSize(MockHerosProvider.EXPECTED_NUM_HEROS_WHEN_ALL_IDS_VALID, items)
 }
 
 fun <T> verifyListSizeWhenSomeItemsEmpty(items: List<T>) {
-    verifyListSize(MockHerosParser.EXPECTED_NUM_HEROS_WHEN_SOME_EMPTY, items)
+    verifyListSize(MockHerosProvider.EXPECTED_NUM_HEROS_WHEN_SOME_EMPTY, items)
 }
 
 fun <T> verifyListSizeForNoData(items: List<T>) {
-    verifyListSize(MockHerosParser.EXPECTED_NUM_HEROS_WHEN_NO_DATA, items)
+    verifyListSize(MockHerosProvider.EXPECTED_NUM_HEROS_WHEN_NO_DATA, items)
 }

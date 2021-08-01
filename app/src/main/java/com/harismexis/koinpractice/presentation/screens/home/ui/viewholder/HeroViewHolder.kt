@@ -1,9 +1,9 @@
 package com.harismexis.koinpractice.presentation.screens.home.ui.viewholder
 
 import androidx.recyclerview.widget.RecyclerView
+import com.harismexis.koinpractice.core.domain.Hero
 import com.harismexis.koinpractice.databinding.VhHeroItemBinding
-import com.harismexis.koinpractice.datamodel.domain.Hero
-import com.harismexis.koinpractice.framework.extensions.populateWithGlide
+import com.harismexis.koinpractice.framework.util.extensions.populateWithGlide
 
 class HeroViewHolder(
     private val binding: VhHeroItemBinding,

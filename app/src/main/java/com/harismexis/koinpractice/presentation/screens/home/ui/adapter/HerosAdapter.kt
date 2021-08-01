@@ -3,7 +3,7 @@ package com.harismexis.koinpractice.presentation.screens.home.ui.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.harismexis.koinpractice.datamodel.domain.Hero
+import com.harismexis.koinpractice.core.domain.Hero
 import com.harismexis.koinpractice.databinding.VhHeroItemBinding
 import com.harismexis.koinpractice.presentation.screens.home.ui.viewholder.HeroViewHolder
 

@@ -7,12 +7,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.harismexis.koinpractice.R
+import com.harismexis.koinpractice.core.domain.Hero
 import com.harismexis.koinpractice.databinding.FragmentHeroDetailBinding
 import com.harismexis.koinpractice.databinding.HeroDetailViewBinding
-import com.harismexis.koinpractice.datamodel.domain.Hero
-import com.harismexis.koinpractice.framework.extensions.populateWithGlide
-import com.harismexis.koinpractice.framework.extensions.setTextOrUnknown
-import com.harismexis.koinpractice.framework.extensions.showToast
+import com.harismexis.koinpractice.framework.util.extensions.populateWithGlide
+import com.harismexis.koinpractice.framework.util.extensions.setTextOrUnknown
+import com.harismexis.koinpractice.framework.util.extensions.showToast
 import com.harismexis.koinpractice.presentation.base.BaseFragment
 import com.harismexis.koinpractice.presentation.result.HeroDetailResult
 import com.harismexis.koinpractice.presentation.screens.herodetail.viewmodel.HeroDetailViewModel

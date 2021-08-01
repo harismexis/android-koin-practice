@@ -7,12 +7,12 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.harismexis.koinpractice.framework.util.ui.hideKeyboard
 import com.harismexis.koinpractice.R
+import com.harismexis.koinpractice.core.domain.Hero
 import com.harismexis.koinpractice.databinding.FragmentHomeBinding
-import com.harismexis.koinpractice.datamodel.domain.Hero
-import com.harismexis.koinpractice.framework.event.EventObserver
-import com.harismexis.koinpractice.framework.extensions.showToast
+import com.harismexis.koinpractice.framework.util.event.EventObserver
+import com.harismexis.koinpractice.framework.util.extensions.showToast
+import com.harismexis.koinpractice.framework.util.ui.hideKeyboard
 import com.harismexis.koinpractice.presentation.base.BaseFragment
 import com.harismexis.koinpractice.presentation.result.HerosResult
 import com.harismexis.koinpractice.presentation.screens.home.ui.adapter.HerosAdapter
